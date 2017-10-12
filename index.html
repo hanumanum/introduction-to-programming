@@ -1,0 +1,17 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="/jotted/jotted.css">
+    </head>
+    <body>
+      <div id="editor"></div>
+      <script src="/jotted/jotted.js"></script>
+      <script>
+        new Jotted(document.querySelector('#editor'), {
+          files: [{
+            type: 'js',
+            url: '/examples/scipt.js'
+          }]
+        })
+      </script>
+    </body>
+  </html>
