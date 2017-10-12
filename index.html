@@ -1,17 +1,47 @@
 <html>
     <head>
-      <link rel="stylesheet" href="/jotted/jotted.css">
+      <!-- <link rel="stylesheet" href="/jotted/jotted.css"> -->
+      <link rel="stylesheet" href="/codegroundjs/dist/codeground.min.css" >
+      <script src="/codegroundjs/dist/Codeground.min.js"></script>
     </head>
     <body>
       <div id="editor"></div>
-      <script src="/jotted/jotted.js"></script>
+      <div id="codeground"></div>
+      
+      <!-- <script src="/jotted/jotted.js"></script> -->
+
+
       <script>
+        /*
         new Jotted(document.querySelector('#editor'), {
           files: [{
             type: 'js',
-            url: '/examples/scipt.js'
+            url: 'examples/script_vars.js'
           }]
         })
+        */
+
+        var opts = {
+            html: '/examples/demo.html', // add preset html, css, js by adding a path to the file you want
+            js:  '/examples/script_vars.js',
+            
+            htmlShow: false, // setting these to false hides that languages editor
+            cssShow: false, // if set false on tabs it hides the button
+            jsShow: true,
+
+            layout: 'half', // whether editor/output takes up full width or half
+            //initialFull: 'editors', // this sets the initial view if you choose layout full
+
+            style: 'rows', // Toggle between rows and tabs view
+            //initialTab: 'html', // if tabs are selected this selects the initial shown tab
+            
+            fullscreen: true, // html, body, and container must be 100% also
+
+            topbar: true, // this sets a top bar, required for the tabs view
+            title: 'TUMO "introduction to programming" sandbox' // optional title for the tab
+        }
+
+        var codeground = new Codeground('codeground', opts);
       </script>
     </body>
   </html>
