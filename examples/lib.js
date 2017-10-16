@@ -1,6 +1,7 @@
 var canvas = document.getElementById('canv');
 var delay = 15;
 var delay1 = 15;
+var delay2 = 15;
 //context.globalCompositeOperation = "source-over";
 
 function drawSquare(x,y,w,color) {
@@ -57,6 +58,20 @@ function randomColor() {
     return color;
   }
   
+
+function background(color){
+    var canv = document.getElementById("canv");
+    canv.style.backgroundColor = color;
+}
+
+function clear(){
+    delay2+=5
+    setTimeout(function(){
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, 1000, 1000);
+        }, delay2);
+
+}
 
   //drawSquare(200,150);
 

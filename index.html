@@ -3,27 +3,38 @@
       <!-- <link rel="stylesheet" href="/jotted/jotted.css"> -->
       <link rel="stylesheet" href="/codegroundjs/dist/codeground.min.css" >
       <script src="/codegroundjs/dist/Codeground.min.js"></script>
+      <link rel="stylesheet" href="/css/style.css" >
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+      
+      <title>Introduction to programming | TUMO activity </title>
     </head>
     <body>
-      <div id="editor"></div>
       <div id="codeground"></div>
+      <div id="errorLog"></div>
       
-      <!-- <script src="/jotted/jotted.js"></script> -->
-
-
       <script>
+
         /*
-        new Jotted(document.querySelector('#editor'), {
-          files: [{
-            type: 'js',
-            url: 'examples/script_vars.js'
-          }]
-        })
+        console.log = (function (old_function, div_log) { 
+            return function (text) {
+                old_function(text);
+                div_log.value += text;
+            };
+        } (console.log.bind(console), document.getElementById("errorLog")));
+        */
+        /*
+        var sandbox = document.getElementsByTagName("textarea");
+        sandbox
+        */
+        /*
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
         */
 
         var opts = {
             html: '/examples/demo.html', // add preset html, css, js by adding a path to the file you want
-            js:  '/examples/script_vars.js',
+            js:  '/examples/empty.js',
             
             htmlShow: false, // setting these to false hides that languages editor
             cssShow: false, // if set false on tabs it hides the button
@@ -40,6 +51,37 @@
             topbar: true, // this sets a top bar, required for the tabs view
             title: 'TUMO "introduction to programming" sandbox' // optional title for the tab
         }
+
+        var slug = window.location.href.split("#")[1];
+        switch (slug) {
+          case "01functions":
+            opts.js="/examples/01functions.js";
+            break;
+          case "02vars":
+            opts.js="/examples/02vars.js";
+            break;
+          case "03loops":
+            opts.js="/examples/03loops.js";
+            break;
+          case "04ifs":
+            opts.js="/examples/04ifs.js";
+            break;
+          case "05randoms":
+            opts.js="/examples/05randoms.js";
+            break;
+          case "06randomscolors":
+            opts.js="/examples/06randomscolors.js";
+            break;
+          case "07randomsrectcirlce":
+            opts.js="/examples/07randomsrectcirlce.js";
+              break;
+          default:
+            break;
+        }
+        
+
+        console.log("asdf");
+
 
         var codeground = new Codeground('codeground', opts);
       </script>

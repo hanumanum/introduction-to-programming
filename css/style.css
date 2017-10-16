@@ -1,0 +1,25 @@
+#errorLog{
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    bottom:5px;
+    background-color: #f3efef;
+    border: solid 1px black;
+}
+
+#topBar{
+    background-color: #17A589 !important;
+
+}
+
+#topBar h2{
+ 
+    color:white !important;
+}
+
+
+#js textarea{
+    background-color: black;
+    color:white;
+    height: 620px;
+}
