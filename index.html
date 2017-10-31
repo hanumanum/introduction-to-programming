@@ -1,27 +1,28 @@
 <html>
-    <head>
-      <!-- <link rel="stylesheet" href="/jotted/jotted.css"> -->
-      <link rel="stylesheet" href="/codegroundjs/dist/codeground.min.css" >
-      <script src="/codegroundjs/dist/Codeground.min.js"></script>
-      <link rel="stylesheet" href="/css/style.css" >
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
-      
-      <title>Introduction to programming | TUMO activity </title>
-    </head>
-    <body>
-      <div id="codeground" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
-      <div id="errorLog"></div>
-      
-      <script>
 
+<head>
+    <!-- <link rel="stylesheet" href="/jotted/jotted.css"> -->
+    <link rel="stylesheet" href="/codegroundjs/dist/codeground.min.css">
+    <script src="/codegroundjs/dist/Codeground.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+
+    <title>Programming Basics I | TUMO activity </title>
+</head>
+
+<body>
+    <div id="codeground" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
+    <div id="errorLog"></div>
+
+    <script>
         /*
-        console.log = (function (old_function, div_log) { 
-            return function (text) {
-                old_function(text);
-                div_log.value += text;
-            };
-        } (console.log.bind(console), document.getElementById("errorLog")));
-        */
+                        console.log = (function (old_function, div_log) { 
+                            return function (text) {
+                                old_function(text);
+                                div_log.value += text;
+                            };
+                        } (console.log.bind(console), document.getElementById("errorLog")));
+                        */
         /*
         var sandbox = document.getElementsByTagName("textarea");
         sandbox
@@ -34,8 +35,8 @@
 
         var opts = {
             html: '/examples/demo.html', // add preset html, css, js by adding a path to the file you want
-            js:  '/examples/empty.js',
-            
+            js: '/examples/empty.js',
+
             htmlShow: false, // setting these to false hides that languages editor
             cssShow: false, // if set false on tabs it hides the button
             jsShow: true,
@@ -45,45 +46,46 @@
 
             style: 'rows', // Toggle between rows and tabs view
             //initialTab: 'html', // if tabs are selected this selects the initial shown tab
-            
+
             fullscreen: true, // html, body, and container must be 100% also
 
             topbar: true, // this sets a top bar, required for the tabs view
-            title: 'TUMO "introduction to programming" sandbox' // optional title for the tab
+            title: 'TUMO "Programming Basics I" sandbox' // optional title for the tab
         }
 
         var slug = window.location.href.split("#")[1];
         switch (slug) {
-          case "01functions":
-            opts.js="/examples/01functions.js";
-            break;
-          case "02vars":
-            opts.js="/examples/02vars.js";
-            break;
-          case "03loops":
-            opts.js="/examples/03loops.js";
-            break;
-          case "04ifs":
-            opts.js="/examples/04ifs.js";
-            break;
-          case "05randoms":
-            opts.js="/examples/05randoms.js";
-            break;
-          case "06randomscolors":
-            opts.js="/examples/06randomscolors.js";
-            break;
-          case "07randomsrectcirlce":
-            opts.js="/examples/07randomsrectcirlce.js";
-              break;
-          default:
-            break;
+            case "01functions":
+                opts.js = "/examples/01functions.js";
+                break;
+            case "02vars":
+                opts.js = "/examples/02vars.js";
+                break;
+            case "03loops":
+                opts.js = "/examples/03loops.js";
+                break;
+            case "04ifs":
+                opts.js = "/examples/04ifs.js";
+                break;
+            case "05randoms":
+                opts.js = "/examples/05randoms.js";
+                break;
+            case "06randomscolors":
+                opts.js = "/examples/06randomscolors.js";
+                break;
+            case "07randomsrectcirlce":
+                opts.js = "/examples/07randomsrectcirlce.js";
+                break;
+            default:
+                break;
         }
-        
+
 
         console.log("asdf");
 
 
         var codeground = new Codeground('codeground', opts);
-      </script>
-    </body>
-  </html>
+    </script>
+</body>
+
+</html>
