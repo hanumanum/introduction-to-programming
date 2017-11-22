@@ -6,9 +6,8 @@ var i = 0;     //հաշվիչ է
 background("#009978"); //փոխում է կտավի գույնը
 
 
-for(var i=0; i<200; i++){
-    x = random(200,600);
-    y = random(200,400);
-    color = randomColor();
-    drawCirlce(x,y,r,color);    //նկարում է շրջան
-}
+x = random(200,600);
+y = random(200,400);
+color = randomColor();
+drawCirlce(x,y,r,color);    //նկարում է շրջան
+

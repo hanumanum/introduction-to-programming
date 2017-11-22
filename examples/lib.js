@@ -1,18 +1,12 @@
 var canvas = document.getElementById('canv');
 
-function drawSquare(x,y,w,color) {
+function գծիրՔառակուսի(x,y,w,color) {
         var context = canvas.getContext('2d');
         context.beginPath();
-        //context.clearRect(x-1, y-1, 101, 101);
-        //context.clearRect(x+1, y-1, 101, 101);
-        //context.clearRect(x+1, y+1, 101, 101);
-        //context.clearRect(x-1, y+1, 101, 101);
-        
         context.fillStyle = colorNameToHex(color);
         context.rect(x, y, w, w);
         context.fill();
         context.lineWidth = 0;
-        //console.log(x,y);
 }
 
 
@@ -58,37 +52,16 @@ function clear(){
         context.clearRect(0, 0, 1000, 1000);
 }
 
-  //drawSquare(200,150);
-
-
-  /*
-  // wait one second before starting animation
-  setTimeout(function() {
-    var startTime = (new Date()).getTime();
-    animate(myRectangle, canvas, context, startTime);
-  }, 1000);
-  */
-
-  /*
-
-function clear(){
-    delay2+=5
-    setTimeout(function(){
-        var context = canvas.getContext('2d');
-        context.clearRect(0, 0, 1000, 1000);
-        }, delay2);
-
-}
 
 
 
-  */
+
 
 
 
   function colorNameToHex(color)
   {
-      var colors = {"aliceblue":"#f0f8ff","antiquewhite":"#faebd7","aqua":"#00ffff","aquamarine":"#7fffd4","azure":"#f0ffff",
+      colors = {"aliceblue":"#f0f8ff","antiquewhite":"#faebd7","aqua":"#00ffff","aquamarine":"#7fffd4","azure":"#f0ffff",
       "beige":"#f5f5dc","bisque":"#ffe4c4","black":"#000000","blanchedalmond":"#ffebcd","blue":"#0000ff","blueviolet":"#8a2be2","brown":"#a52a2a","burlywood":"#deb887",
       "cadetblue":"#5f9ea0","chartreuse":"#7fff00","chocolate":"#d2691e","coral":"#ff7f50","cornflowerblue":"#6495ed","cornsilk":"#fff8dc","crimson":"#dc143c","cyan":"#00ffff",
       "darkblue":"#00008b","darkcyan":"#008b8b","darkgoldenrod":"#b8860b","darkgray":"#a9a9a9","darkgreen":"#006400","darkkhaki":"#bdb76b","darkmagenta":"#8b008b","darkolivegreen":"#556b2f",
